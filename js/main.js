@@ -3,8 +3,6 @@ document.querySelector('button').addEventListener('click', searchCocktail)
 
 function searchCocktail() {
     const cocktail = document.querySelector('input').value;
-
-    console.log(cocktail)
     
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
         .then(res => res.json())
