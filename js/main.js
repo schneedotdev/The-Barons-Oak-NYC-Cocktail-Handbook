@@ -4,6 +4,8 @@ document.querySelector('button').addEventListener('click', searchCocktail)
 function searchCocktail() {
     const cocktail = document.querySelector('input').value;
 
+    resetDOM();
+
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
         .then(res => res.json())
         .then(data => {
@@ -23,14 +25,25 @@ function searchCocktail() {
 
 function addToDOM(drink) {
     const section = document.createElement('section');
+    section.classList.add('cocktail')
 
     section.innerHTML = `
         <h2>${drink.strDrink}</h2>
         <img src="${drink.strDrinkThumb}" alt="${drink.strDrink} cocktail"></img>
-        <h3>Ingredients<h3>
-        <h3>Instructions:</h3>
-        <p>${drink.strInstructions}</p>
+
+        <div>
+            <h3>Instructions:</h3>
+            <p>${drink.strInstructions}</p>
+        </div> 
     `;
     
     document.getElementById('cocktails').appendChild(section);
+}
+
+function resetDOM() {
+    const cocktails = document.getElementById('cocktails');
+
+    while (cocktails.firstChild) {
+        cocktails.removeChild(cocktails.firstChild)
+    }
 }

@@ -1,22 +1,73 @@
-/******************************************
-/* CSS
-/*******************************************/
-
 /* Box Model Hack */
 *{
   box-sizing: border-box;
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-img{
-  display: block;
-  margin: 0 auto;
-  height: 200px;
+/*
+================= Layout Styles =================
+*/
+body {
+  background: white;
+  color: #444941;
+  font-family: 'Roboto', sans-serif;
+}
+
+#title {
+  text-align: center;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+input {
+  background: #EEEEEE;
+  color: #444941;
+
+  padding: .5rem;
+}
+
+button, 
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #3D56B2;
+  color: white;
+  padding: 0 .5rem;
+}
+
+#cocktails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cocktail {
+  width: 30%;
+  margin: 1rem;
+
+  /* background: #393E46; */
+  border-radius: .5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+img{
+  height: 15rem;
+  border-radius: .3rem;
+}
+
+div {
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/*
+================= Additional Styles =================
+*/
