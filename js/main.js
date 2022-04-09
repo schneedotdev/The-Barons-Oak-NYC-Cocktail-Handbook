@@ -2,15 +2,13 @@ document.querySelector('button').addEventListener('click', searchCocktail)
 
 function searchCocktail() {
     const cocktail = document.querySelector('input').value;
-
-    resetDOM();
-
+    
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
         .then(res => res.json())
         .then(data => {
-            const drinks = data.drinks;
+            resetDOM();
 
-            drinks.forEach(drink => {
+            data.drinks.forEach(drink => {
                 console.log(drink)
                 addToDOM(drink)
             });
@@ -23,9 +21,8 @@ function searchCocktail() {
 function resetDOM() {
     const cocktails = document.getElementById('cocktails');
 
-    while (cocktails.firstChild) {
+    while (cocktails.firstChild)
         cocktails.removeChild(cocktails.firstChild)
-    }
 }
 
 function addToDOM(drink) {
