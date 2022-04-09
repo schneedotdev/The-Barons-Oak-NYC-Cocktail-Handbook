@@ -20,6 +20,14 @@ function searchCocktail() {
         })
 }
 
+function resetDOM() {
+    const cocktails = document.getElementById('cocktails');
+
+    while (cocktails.firstChild) {
+        cocktails.removeChild(cocktails.firstChild)
+    }
+}
+
 function addToDOM(drink) {
     const section = document.createElement('section');
     section.classList.add('cocktail')
@@ -37,14 +45,6 @@ function addToDOM(drink) {
     `;
     
     document.getElementById('cocktails').appendChild(section)
-}
-
-function resetDOM() {
-    const cocktails = document.getElementById('cocktails');
-
-    while (cocktails.firstChild) {
-        cocktails.removeChild(cocktails.firstChild)
-    }
 }
 
 function listIngredients(drink) {
