@@ -26,7 +26,6 @@ body {
 input {
   background: #EEEEEE;
   color: #444941;
-
   padding: .5rem;
 }
 
@@ -49,15 +48,11 @@ button {
 }
 
 .cocktail {
+  text-align: center;
   width: 20%;
   margin: 1rem;
-
-  /* background: #393E46; */
   border-radius: .5rem;
-  /* padding: 1rem; */
-  text-align: center;
 }
-
 
 img{
   height: 15rem;
@@ -65,8 +60,12 @@ img{
 }
 
 div {
-  border-radius: .5rem;
-  padding: 1rem;
+  text-align: left;
+  padding: 1.5rem;
+}
+
+ul {
+  min-height: 6rem;
 }
 
 /*

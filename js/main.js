@@ -32,12 +32,15 @@ function addToDOM(drink) {
         <img src="${drink.strDrinkThumb}" alt="${drink.strDrink} cocktail"></img>
 
         <div>
+            <h3>Ingredients:</h3>
+            <ul id="ingredients">${listIngredients(drink)}</ul>
             <h3>Instructions:</h3>
             <p>${drink.strInstructions}</p>
         </div> 
     `;
+
     
-    document.getElementById('cocktails').appendChild(section);
+    document.getElementById('cocktails').appendChild(section)
 }
 
 function resetDOM() {
@@ -46,4 +49,17 @@ function resetDOM() {
     while (cocktails.firstChild) {
         cocktails.removeChild(cocktails.firstChild)
     }
+}
+
+function listIngredients(drink) {
+    const ingredients = document.getElementById('ingredients');
+    let str = '';
+
+    for (const [key, value] of Object.entries(drink)) {
+        if(key.includes('strIngredient') && value) {
+            str += `<li>${value}</li>\n`
+        }
+    }
+
+    return str;
 }
