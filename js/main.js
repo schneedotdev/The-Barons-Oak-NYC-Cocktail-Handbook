@@ -1,4 +1,3 @@
-//The user will enter a cocktail. Get a cocktail name, photo, and instructions and place them in the DOM
 document.querySelector('button').addEventListener('click', searchCocktail)
 
 function searchCocktail() {
@@ -10,9 +9,7 @@ function searchCocktail() {
         .then(res => res.json())
         .then(data => {
             const drinks = data.drinks;
-            console.log(drinks);
 
-            
             drinks.forEach(drink => {
                 console.log(drink)
                 addToDOM(drink)
@@ -38,7 +35,6 @@ function addToDOM(drink) {
             <p>${drink.strInstructions}</p>
         </div> 
     `;
-
     
     document.getElementById('cocktails').appendChild(section)
 }
@@ -52,7 +48,6 @@ function resetDOM() {
 }
 
 function listIngredients(drink) {
-    const ingredients = document.getElementById('ingredients');
     let str = '';
 
     for (const [key, value] of Object.entries(drink)) {
