@@ -13,6 +13,7 @@ body {
 }
 
 #title {
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -43,17 +44,17 @@ button {
 
 #cocktails {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cocktail {
-  width: 30%;
+  width: 20%;
   margin: 1rem;
 
   /* background: #393E46; */
   border-radius: .5rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: center;
 }
 
