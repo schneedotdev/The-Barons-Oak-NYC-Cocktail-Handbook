@@ -31,7 +31,7 @@ function addToDOM(drink) {
 
     section.innerHTML = `
         <h2>${drink.strDrink}</h2>
-        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink} cocktail"></img>
+        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink} cocktail"/>
 
         <div>
             <h3>Ingredients:</h3>
@@ -46,6 +46,7 @@ function addToDOM(drink) {
 
 function listIngredients(drink) {
     let str = '';
+    let location;
 
     for (const [key, value] of Object.entries(drink)) {
         if(key.includes('strIngredient') && value) {
