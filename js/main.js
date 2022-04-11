@@ -46,11 +46,13 @@ function addToDOM(drink) {
 
 function listIngredients(drink) {
     let str = '';
-    let location;
 
     for (const [key, value] of Object.entries(drink)) {
         if(key.includes('strIngredient') && value) {
-            str += `<li>${value}</li>\n`
+            let measurement = drink['strMeasure' + key.substring(13, key.length)];
+            measurement = measurement ? ` (${measurement.trim()})` : '' 
+
+            str += `<li>${value + measurement}</li>\n`
         }
     }
 
