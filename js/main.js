@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', searchCocktail);
+
 document.querySelector('button').addEventListener('click', searchCocktail)
 
 function searchCocktail() {
