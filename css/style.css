@@ -6,15 +6,43 @@
 /*
 ================= Layout Styles =================
 */
-body {
-  background: white;
-  color: #444941;
-  font-family: 'Roboto', sans-serif;
+
+html {
+  font-size: 62.5%;
 }
 
-#title {
-  margin-top: 3rem;
+body {
+  background: #1c1c1c;
+  color: #1c1c1c;
+  font-family: 'Poppins', sans-serif;
+}
+
+#bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  z-index: -1000;
+}
+
+#primary-header {
+  width: 100%;
   text-align: center;
+}
+
+#logo {
+  margin: 4rem 0 0 0;
+  height: 10rem;
+}
+
+#handbook {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #fffaf0;
+  margin-bottom: 2rem
 }
 
 #form {
@@ -24,21 +52,22 @@ body {
 }
 
 input {
-  background: #EEEEEE;
-  color: #444941;
-  padding: .5rem;
+  background: #fffaf0;
+  color: #1c1c1c;
+  padding: 1.3rem 5rem 1.3rem 1.5rem;
 }
 
 button, 
 input {
+  font-size: 1.5rem;
   border: none;
   outline: none;
 }
 
 button {
-  background: #3D56B2;
+  background: #c69a52;
   color: white;
-  padding: 0 .5rem;
+  padding: 0 2rem;
 }
 
 #cocktails {
@@ -48,26 +77,29 @@ button {
 }
 
 .cocktail {
-  text-align: center;
-  width: 20%;
-  margin: 1rem;
-  border-radius: .5rem;
+  display: flex;
+  background: #fffaf0;
+  width: 50%;
+  height: 17rem;
+  margin: .5rem 15%;
+  border: .3rem solid #1c1c1c;
+}
+
+.cocktail-name {
+  font-family: 'Koulen', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 img{
-  height: 15rem;
-  border-radius: .3rem;
+  height: 100%;
 }
 
 div {
   text-align: left;
-  padding: 1.5rem;
+  padding: 2rem 4rem;
 }
 
 ul {
-  min-height: 6rem;
+  margin-bottom: 1rem;
 }
-
-/*
-================= Additional Styles =================
-*/

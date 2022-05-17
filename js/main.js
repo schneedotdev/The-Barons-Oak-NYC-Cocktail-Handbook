@@ -32,13 +32,11 @@ function addToDOM(drink) {
     section.classList.add('cocktail')
 
     section.innerHTML = `
-        <h2>${drink.strDrink}</h2>
         <img src="${drink.strDrinkThumb}" alt="${drink.strDrink} cocktail"/>
 
         <div>
-            <h3>Ingredients:</h3>
+            <h2 class="cocktail-name">${drink.strDrink}</h2>
             <ul id="ingredients">${listIngredients(drink)}</ul>
-            <h3>Instructions:</h3>
             <p>${drink.strInstructions}</p>
         </div> 
     `;
