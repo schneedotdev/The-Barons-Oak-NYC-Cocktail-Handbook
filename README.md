@@ -13,7 +13,7 @@
 
 **Tech used:** HTML, CSS, JavaScript
 
-Using JavaScript's Fetch API, I made a website that fetches drink data from https://www.thecocktaildb.com/. The user is then able to make a search based on a type of liquor or a cocktail name. The resulting list includes cocktails with ingredients and instructions on how to make the drink. 
+Using the Fetch API, I made a website that pulls drink data from https://www.thecocktaildb.com/. The user is then able to make a search based on a type of liquor or a cocktail name. The resulting list includes cocktails with ingredients and instructions on how to make the drink. 
 
 ## Future Optimizations:
 
